@@ -1,10 +1,10 @@
 import React from 'react';
 import { Alert, StyleSheet, Text, TouchableHighlight, View } from "react-native";
 
-export default function Button( { number, highlight } ) {
+export default function Button( { number, highlight, pressButton } ) {
 
   return (
-    <TouchableHighlight style={styles.button} onPress={() => console.log(number)}>
+    <TouchableHighlight style={styles.button} onPress={() => pressButton()}>
       <Text style={{ fontSize: 30, color: highlight ? '#ff9f21' : '#ffffff' }}>{number}</Text>
     </TouchableHighlight>
   );
